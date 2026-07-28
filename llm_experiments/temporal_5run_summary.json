@@ -1,0 +1,13 @@
+{
+  "gpt56_terra_5_runs": [
+    0.0503,
+    0.2165,
+    0.0493,
+    0.05,
+    0.0671
+  ],
+  "gpt56_terra_mean": 0.0866,
+  "gpt56_terra_std": 0.0653,
+  "gpt4omini_temporal": 0.3033,
+  "cold_f1_all_conditions": 0.0
+}
