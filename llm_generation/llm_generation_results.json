@@ -1,0 +1,23 @@
+{
+  "experiment": "LLM Synthetic Data Generation",
+  "model": "gpt-4o-mini",
+  "n_synthetic_cold_rows": 100,
+  "baseline_f1_7class": 0.2858,
+  "baseline_f1_3class": 0.7163,
+  "tstr_f1_7class": 0.3032,
+  "tstr_cold_f1": 0.0,
+  "tstr_vs_baseline": 0.0174,
+  "augmented_f1_7class": 0.2728,
+  "augmented_cold_f1": 0.0,
+  "augmented_vs_baseline": -0.013,
+  "generation_latency_ms_per_row": 2142.21,
+  "rf_inference_latency_ms_per_row": 0.0021,
+  "fidelity": {
+    "ambient_temp_real_cold_mean": 21.98,
+    "ambient_temp_synth_cold_mean": 19.08,
+    "wrist_skin_real_cold_mean": 33.39,
+    "wrist_skin_synth_cold_mean": 32.26
+  },
+  "cold_f1_all_conditions": 0.0,
+  "key_finding": "LLM overcools \u2014 generates Cold at 19C vs real Cold at 22C. Between-subject gap manifests in generation."
+}
