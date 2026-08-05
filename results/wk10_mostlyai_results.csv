@@ -1,0 +1,10 @@
+method,protocol,granularity,macro_f1,delta_vs_baseline,retention_pct,cold_f1,notes
+Baseline (real only),TRTR,7,0.2858,0.0000,100.0,0.0000,
+Baseline (real only),TRTR,3,0.7163,0.0000,100.0,0.7120,
+MostlyAI,TSTR,7,0.2119,-0.0739,74.1,0.0000,unconditional generation
+MostlyAI,Augmented,7,0.2563,-0.0295,89.7,0.0000,unconditional generation
+MostlyAI,TSTR,3,0.6601,-0.0562,92.2,0.7341,unconditional generation
+MostlyAI,Augmented,3,0.6719,-0.0444,93.8,0.7440,unconditional generation
+MostlyAI Cold-conditional (n=10;000),Augmented,7,0.2059,-0.0799,72.0,0.2161,Cold share after augmentation: 4.51%
+MostlyAI Cold-conditional (n=50;000),Augmented,7,0.1624,-0.1234,56.8,0.1826,Cold share after augmentation: 7.39%
+MostlyAI Cold-conditional (n=200;000),Augmented,7,0.0650,-0.2208,22.7,0.1513,Cold share after augmentation: 16.80%

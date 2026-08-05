@@ -1,0 +1,76 @@
+{
+  "_provenance_note": "RECONSTRUCTED 5 August 2026 from the printed output cells of wk10_mostlyai_verification.ipynb, after the Colab runtime terminated before the original results/wk10_manifest.json could be downloaded. Every field below was printed by the notebook and is therefore verifiable against the committed .ipynb. Fields the notebook computed but never printed are recorded as null and MUST NOT be invented.",
+  "_reconstruction_source": "wk10_mostlyai_verification.ipynb, output cells 3, 5, 6, 10, 13, 16, 19",
+
+  "run_id": "20260804_231218",
+  "started": "2026-08-04T23:12:18",
+  "finished": null,
+  "_finished_note": "Written to the JSON at the end of the run but never printed to stdout. Unrecoverable.",
+
+  "python": "3.12.13",
+  "numpy": "2.0.2",
+  "pandas": "2.2.2",
+  "sklearn": "1.6.1",
+  "random_state": 42,
+  "_random_state_note": "Applies to the Random Forest evaluators and the stratified sampling only. The MostlyAI generator was NOT seeded and does not reproduce across runs. See known_issues.",
+
+  "dataset": "kopetri/AutoTherm indoor",
+  "test_participants": ["participant_14", "participant_16", "participant_20"],
+  "n_train_rows": 1276709,
+  "n_test_rows": 290019,
+  "n_train_participants": 13,
+
+  "test_label_distribution_7class": {
+    "-3": 22556,
+    "-2": 19285,
+    "-1": 85260,
+    "0": 39044,
+    "1": 16824,
+    "2": 51786,
+    "3": 55264
+  },
+
+  "n_features": 18,
+  "feature_cols": [
+    "Age", "Gender", "Weight", "Height", "Bodyfat", "Bodytemp",
+    "Sport-Last-Hour", "Time-Since-Meal", "Tiredness", "Clothing-Level",
+    "Radiation-Temp", "PCE-Ambient-Temp", "Wrist_Skin_Temperature",
+    "Heart_Rate", "GSR", "Ambient_Temperature", "Ambient_Humidity",
+    "Solar_Radiation"
+  ],
+  "leakage_assertions": "passed",
+
+  "mostlyai_sdk_version": "6.1.1",
+  "mostlyai_mode": "local",
+  "mostlyai_generator_id": "b2cf35b1-d130-4276-b0d3-9a8842518844",
+  "mostlyai_sample_size": 99996,
+  "mostlyai_sample_label_dist": {
+    "-3": 3761,
+    "-2": 9151,
+    "-1": 20622,
+    "0": 24056,
+    "1": 13968,
+    "2": 15896,
+    "3": 12542
+  },
+
+  "uncond_n_synthetic": 99996,
+  "uncond_real_cold_share": 0.0376,
+  "uncond_synth_cold_share": 0.0354,
+
+  "conditional_cold_targets": [10000, 50000, 200000],
+  "conditional_cold_purity": "100.0% of returned rows carried Label = -3 at all three levels",
+  "real_cold_n": 48020,
+  "real_cold_pct_of_training_pool": 3.76,
+
+  "n_conditions_logged": 9,
+
+  "balanced_accuracy": null,
+  "_balanced_accuracy_note": "Computed by log_result for every condition but omitted from the printed summary table. Unrecoverable without re-running, which is not advisable given the unseeded generator.",
+
+  "known_issues": [
+    "MostlyAI generator training was not seeded. The 3-class figures here (TSTR 0.6601, Augmented 0.6719) do not reproduce wk4 (0.7003, 0.7066), a discrepancy of roughly 0.04 macro-F1. The Random Forest baselines reproduce wk4 exactly to four decimal places, which localises the non-determinism to the generator rather than the data pipeline. Any MostlyAI figure reported in the thesis must be presented with this caveat, or the generator must be retrained several times and reported as a mean with a range.",
+    "The notebook's closing 'HOW TO READ THIS' block is a pre-written interpretation guide drafted before the run. It states that a zero Cold F1 confirms the thesis claim. The observed Cold F1 was NOT zero (0.2161 / 0.1826 / 0.1513). Read the results table, not the guide.",
+    "Cold F1 in the 3-class formulation is 0.7120 at baseline, not zero. The 3-class 'Cold' class merges labels -3 and -2 and is learnable. Claims of a zero Cold F1 apply ONLY to the 7-class label -3."
+  ]
+}
