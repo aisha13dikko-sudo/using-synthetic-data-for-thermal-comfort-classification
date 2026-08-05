@@ -1,0 +1,19 @@
+method,protocol,granularity,macro_f1,cold_f1,train_s,infer_ms_per_row,run_id,notes
+Baseline (real only),TRTR,7,0.2858,0.0,142.4,0.0084,20260805_150957,
+Baseline (real only),TRTR,3,0.7163,0.712,103.9,0.0039,20260805_150957,
+Class-weighted RF,Cost-sensitive,7,0.2504,0.0,123.2,0.0071,20260805_150957,class_weight=balanced
+Class-weighted RF,Cost-sensitive,3,0.6815,0.6567,105.4,0.004,20260805_150957,class_weight=balanced
+Balanced RF,Cost-sensitive,7,0.2429,0.0,93.0,0.0066,20260805_150957,"sampling_strategy=all, replacement=True, bootstrap=False"
+Balanced RF,Cost-sensitive,3,0.6529,0.6656,138.3,0.0054,20260805_150957,"sampling_strategy=all, replacement=True, bootstrap=False"
+MostlyAI run2,TSTR,7,0.2503,0.0,,,20260805_150957,
+MostlyAI run2,Augmented,7,0.2639,0.0,,,20260805_150957,
+MostlyAI run2,TSTR,3,0.7059,0.7839,,,20260805_150957,
+MostlyAI run2,Augmented,3,0.7151,0.7414,,,20260805_150957,
+MostlyAI run3,TSTR,7,0.2562,0.0,,,20260805_150957,
+MostlyAI run3,Augmented,7,0.2716,0.0,,,20260805_150957,
+MostlyAI run3,TSTR,3,0.7079,0.7199,,,20260805_150957,
+MostlyAI run3,Augmented,3,0.7026,0.7072,,,20260805_150957,
+MostlyAI run4,TSTR,7,0.2324,0.0,,,20260805_150957,
+MostlyAI run4,Augmented,7,0.2942,0.0,,,20260805_150957,
+MostlyAI run4,TSTR,3,0.7324,0.748,,,20260805_150957,
+MostlyAI run4,Augmented,3,0.7038,0.7347,,,20260805_150957,

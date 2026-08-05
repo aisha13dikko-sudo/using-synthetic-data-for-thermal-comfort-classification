@@ -1,0 +1,20 @@
+{
+  "run_id": "20260805_150957",
+  "started": "2026-08-05T15:09:57",
+  "python": "3.12.13",
+  "numpy": "2.0.2",
+  "pandas": "2.2.2",
+  "sklearn": "1.6.1",
+  "random_state": 42,
+  "purpose": "cost-sensitive baselines; MostlyAI variance across runs",
+  "dataset": "kopetri/AutoTherm indoor",
+  "test_participants": [
+    "participant_14",
+    "participant_16",
+    "participant_20"
+  ],
+  "n_train_rows": 1276709,
+  "n_test_rows": 290019,
+  "finished": "2026-08-05T17:17:12",
+  "n_conditions_logged": 18
+}
