@@ -1,0 +1,7 @@
+condition,granularity,macro_f1,cold_f1,n_calls,elapsed_s,ms_per_call,split,run_id,notes
+3-class zero-shot,3,0.462,0.0,300,137.7,459.2,subject-wise,20260811_235539,0 parse failures
+3-class few-shot,3,0.4258,0.4242,300,141.3,471.1,subject-wise,20260811_235539,0 parse failures
+7-class zero-shot,7,0.2475,0.0,350,158.5,452.9,subject-wise,20260811_235539,0 parse failures
+7-class few-shot,7,0.2216,0.0,350,176.7,504.8,subject-wise,20260811_235539,0 parse failures
+RF baseline (LLM sample),7,0.2708,0.0,350,0.0,0.0,subject-wise,20260811_235539,same stratified rows as the LLM conditions
+RF baseline (LLM sample),3,0.705,0.7261,300,0.0,0.0,subject-wise,20260811_235539,same stratified rows as the LLM conditions
