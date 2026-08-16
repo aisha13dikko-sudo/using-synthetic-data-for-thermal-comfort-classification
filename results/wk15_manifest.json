@@ -1,0 +1,53 @@
+{
+  "run_id": "20260816_150808",
+  "started": "2026-08-16T15:08:08",
+  "python": "3.12.13",
+  "pandas": "2.2.2",
+  "sklearn": "1.6.1",
+  "model": "gpt-5.6-terra",
+  "n_runs": 5,
+  "purpose": "five traceable GPT-5.6 Terra temporal runs, replacing four hand-typed values confirmed unrecoverable 16 Aug 2026",
+  "finished": "2026-08-16T15:20:48",
+  "mean_macro_f1": 0.0723,
+  "sd_macro_f1": 0.0318,
+  "individual_runs": [
+    {
+      "run": 1,
+      "macro_f1": 0.1268,
+      "cold_f1": 0.0,
+      "n_windows": 120,
+      "elapsed_s": 130.7
+    },
+    {
+      "run": 2,
+      "macro_f1": 0.0682,
+      "cold_f1": 0.0,
+      "n_windows": 120,
+      "elapsed_s": 126.1
+    },
+    {
+      "run": 3,
+      "macro_f1": 0.0496,
+      "cold_f1": 0.0,
+      "n_windows": 120,
+      "elapsed_s": 127.0
+    },
+    {
+      "run": 4,
+      "macro_f1": 0.0671,
+      "cold_f1": 0.0,
+      "n_windows": 120,
+      "elapsed_s": 127.2
+    },
+    {
+      "run": 5,
+      "macro_f1": 0.0496,
+      "cold_f1": 0.0,
+      "n_windows": 120,
+      "elapsed_s": 129.0
+    }
+  ],
+  "n_windows": 120,
+  "n_regular_windows": 100,
+  "n_cold_targeted_windows": 20
+}
