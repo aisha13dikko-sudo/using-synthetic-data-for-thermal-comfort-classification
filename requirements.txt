@@ -1,0 +1,24 @@
+# Core environment (pinned to the Google Colab runtime versions recorded
+# in results/wk*_manifest.json)
+numpy==2.0.2
+pandas==2.2.2
+scikit-learn==1.6.1
+matplotlib
+
+# Data loading
+datasets
+
+# Synthetic data generation
+sdv
+deepecho
+ForestDiffusion
+mostlyai[local]
+
+# Imbalanced-label handling
+imbalanced-learn
+
+# LLM classification / generation
+openai
+
+# Deep learning backend (used directly for CUDA checks, and by sdv/deepecho)
+torch
