@@ -61,6 +61,8 @@ Notes:
 
 Each major experiment writes a `wk*_manifest.json` to `results/`, capturing library versions, random seeds, and participant splits at the time of the run, so results can be traced back to the exact configuration that produced them (see e.g. [results/wk10_manifest.json](results/wk10_manifest.json)).
 
+This provenance pattern was introduced starting with `wk10`. The `wk2`, `wk3`, and `wk4` notebooks call `.to_csv(...)` on their own results tables, but those files were written to the Colab runtime's local disk and were never downloaded or committed — they are not recoverable and do not exist in this repository. The numbers those notebooks report only exist as printed cell output inside the committed `.ipynb` files themselves.
+
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
