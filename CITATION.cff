@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Using Synthetic Data for Thermal Comfort Classification"
+type: software
+authors:
+  - family-names: "Dikko"
+    given-names: "Aisha"
+    affiliation: "University College London"
+license: MIT
+repository-code: "https://github.com/aisha13dikko-sudo/using-synthetic-data-for-thermal-comfort-classification"
+version: 1.0.0
+date-released: "2026-08-31"
+keywords:
+  - thermal comfort
+  - synthetic data
+  - large language models
+  - machine learning
+  - AutoTherm
+references:
+  - type: article
+    title: "AutoTherm: A Dataset and Benchmark for Thermal Comfort Estimation Indoors and in Vehicles"
+    authors:
+      - family-names: "Colley"
+        given-names: "Mark"
+      - family-names: "Hartwig"
+        given-names: "Sebastian"
+      - family-names: "Zeqiri"
+        given-names: "Albin"
+      - family-names: "Ropinski"
+        given-names: "Timo"
+      - family-names: "Rukzio"
+        given-names: "Enrico"
+    year: 2024
+    journal: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+    volume: 8
+    issue: 3
+    doi: "10.48550/arXiv.2211.08257"

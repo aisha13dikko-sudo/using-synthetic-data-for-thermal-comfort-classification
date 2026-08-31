@@ -63,6 +63,17 @@ Each major experiment writes a `wk*_manifest.json` to `results/`, capturing libr
 
 This provenance pattern was introduced starting with `wk10`. The `wk2`, `wk3`, and `wk4` notebooks call `.to_csv(...)` on their own results tables, but those files were written to the Colab runtime's local disk and were never downloaded or committed — they are not recoverable and do not exist in this repository. The numbers those notebooks report only exist as printed cell output inside the committed `.ipynb` files themselves.
 
+## Data Availability
+
+This statement follows a per-data-type disclosure: what is shared, where, and why anything is not re-hosted here.
+
+- **Raw sensor data.** This project does not collect its own human-subject data. All sensor readings come from the third-party, public **AutoTherm indoor dataset** (Colley, Hartwig, Zeqiri, Ropinski & Rukzio, 2024, *AutoTherm: A Dataset and Benchmark for Thermal Comfort Estimation Indoors and in Vehicles*, Proc. ACM IMWUT 8(3), Article 96; also at [arXiv:2211.08257](https://arxiv.org/abs/2211.08257), DOI: [10.48550/arXiv.2211.08257](https://doi.org/10.48550/arXiv.2211.08257)), already de-identified by its original authors and permanently hosted at [huggingface.co/datasets/kopetri/AutoTherm](https://huggingface.co/datasets/kopetri/AutoTherm) under an MIT license. It is not duplicated into this repository — it is loaded directly from that persistent source at runtime (`load_dataset("kopetri/AutoTherm", "indoor")`) — because it already has its own stable, citable home and license; re-hosting a copy here would fork it from its authoritative version.
+- **Derived data (this project's own outputs).** Every dataset this project generated — synthetic rows, per-run manifests, classification predictions, and evaluation tables — is committed in full under `results/`, `llm_generation/`, and `llm_experiments/`. Nothing here is "available upon request"; what exists is in the repository, and any gap is documented explicitly (see the note under [Reproducibility](#reproducibility) about `wk2`/`wk3`/`wk4`'s unrecovered intermediate CSVs).
+- **Analysis code.** All code that goes from the raw AutoTherm data to every number reported in the thesis is in the notebooks listed under [Project structure](#project-structure) — there is no code held back. Software versions are pinned in [requirements.txt](requirements.txt); exact per-run versions and configuration (random seeds, train/test participant splits) are additionally recorded in `results/wk*_manifest.json` for each major experiment (see [Setup](#setup) and [Reproducibility](#reproducibility)).
+- **Materials/stimuli.** The "materials" specific to this project are the LLM prompt templates used for synthetic data generation and classification. These are not a separate artefact — they are defined as code (`build_generation_prompt`, `build_temporal_prompt`, and equivalents) inside `wk9_llm_synthetic_generation.ipynb`, `wk14_llm_subjectwise.ipynb`, `wk15_terra_multirun_2.ipynb`, and `temporal_llm_classification_clean.ipynb`, and are versioned identically to the rest of the analysis code.
+- **Codebook.** Not applicable — this is a quantitative machine-learning study with no qualitative coding scheme.
+- **Preregistration.** Not applicable — this was exploratory/methodological comparison work (evaluating multiple synthetic-data generation methods against real-data baselines), not a preregistered confirmatory study.
+
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
